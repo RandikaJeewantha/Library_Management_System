@@ -1,0 +1,88 @@
+
+body {
+	background-image: url(../images/background2.jpg);
+	background-repeat: no-repeat;
+	background-size: 98% 95% ;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: black;
+}
+
+#link{
+	text-decoration: none;
+}
+
+#button-div {
+	background: #0899;
+	color: #fff;
+	width: 240px;
+	display: inline-flex;
+	padding: 5px 20px;
+	border-radius: 8px;
+	height: 50px;
+}
+
+#button-div #img_div {
+	position: relative;
+}
+
+#button-div #button_text {
+	text-align: center;
+	position: relative;
+	font-size: 20px;
+	padding-left: 35px;
+	font-weight: bold;
+}
+
+#menu #button-div #button_text {
+	padding-top: 15px;
+}
+
+#menu {
+	padding-top: 30px;
+	padding-left: 70px;
+	float: left;
+	position: relative;
+}
+
+#Dashboard1 {
+	float: right;
+	position: relative;
+	padding-top: 90px;
+	padding-right: 50px;
+}
+
+#Dashboard1 #button-div {
+	background: rgba(30,144,255,0.8);
+}
+
+#Dashboard2 #button-div {
+	background: rgba(30,144,255,0.8);
+}
+
+#Dashboard1 #button-div #button_text {
+	color: black;
+	font-weight: bold;
+}
+
+#Dashboard2 #button-div #button_text {
+	color: black;
+	font-weight: bold;
+}
+
+#menu label {
+	font-size: 30px;
+	color: red;
+}
+
+#Dashboard1, #Dashboard2 label {
+	font-size: 30px;
+	color: red;
+}
+
+#Dashboard2 {
+	float: right;
+	position: relative;
+	padding-top: 200px;
+	padding-right: 25px;
+}
