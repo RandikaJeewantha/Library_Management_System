@@ -141,4 +141,30 @@
 		</div>';
 	}
 
+	function available_books(){
+		global $connection;
+
+		$queries = "SELECT book_id, quantity FROM books INNER JOIN borrow ON books.book_id = borrow.borrow_book_id ";
+		$books = mysqli_query($connection, $queries);
+		verify_query($books);
+
+		while ($count = mysqli_fetch_assoc($books)) {
+			$book_id = $count['book_id'];
+			$book_borrow_count = mysqli_num_rows(mysqli_query($connection, 'SELECT * FROM borrow WHERE borrow_book_id = "$book_id" '));
+			$quanty = $count['quantity'];
+
+			if ($book_borrow_count < $quanty) {
+				$query = 'UPDATE books SET is_available = "1" WHERE book_id = "$book_id" ';
+				$up = mysqli_query($connection, $query);
+				verify_query($up);
+			}
+
+			else {
+				$query = 'UPDATE books SET is_available = "0" WHERE book_id = "$book_id" ';
+				$up = mysqli_query($connection, $query);
+				verify_query($up);
+			}
+		}
+	}
+
 ?>

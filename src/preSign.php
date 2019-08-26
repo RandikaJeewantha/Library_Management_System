@@ -20,7 +20,7 @@
 			$password = mysqli_real_escape_string($connection, $_POST['password']);
 			$hashed_password = sha1($password);
 
-			$query = "SELECT * FROM user WHERE email = '{$email}' AND password = '{$hashed_password}' LIMIT 1";
+			$query = "SELECT * FROM user WHERE email = '{$email}' AND password = '{$hashed_password}' AND is_deleted = 0 LIMIT 1";
 			$result_set = mysqli_query($connection, $query);
 
 			verify_query($result_set);

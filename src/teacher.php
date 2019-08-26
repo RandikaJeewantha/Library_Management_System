@@ -28,9 +28,10 @@
 		return $book_list;
 	}
  
+ 
 	$user_list = '';
 
-	$query = "SELECT * FROM user WHERE is_deleted=0 AND user_type = 'student' ORDER BY user_type";
+	$query = "SELECT * FROM user WHERE is_deleted=0 AND user_type = 'Teacher' ORDER BY user_type";
 	$users = mysqli_query($connection, $query);
 
 	verify_query($users);
@@ -53,7 +54,7 @@
 <html>
 	
 	<head>
-		<title>Student</title>
+		<title>Teachers</title>
 		<link rel="stylesheet" type="text/css" href="../asserts/css/common.css">
 		<link rel="stylesheet" type="text/css" href="../asserts/css/all.css">
 		<link rel="stylesheet" type="text/css" href="../asserts/css/student.css">
@@ -69,7 +70,7 @@
 
 		<div class="data">
 			
-			<h1>Students&nbsp;&nbsp; <span><a href="addUser.php">+ Add New Student</a></span></h1>
+			<h1>Teachers&nbsp;&nbsp; <span><a href="addUser.php">+ Add New Teacher</a></span></h1>
 
 			<table class="masterlist">
 				<tr>

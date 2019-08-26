@@ -1,0 +1,174 @@
+* {
+	margin: 0px;
+}
+
+body {
+	background-image: url(../images/background3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+header {
+	overflow: auto;
+	padding: 10px;
+	background: black;
+}
+
+header .loggedin {
+	float: right;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.master {
+	width: 100%;
+}
+
+.add_book {
+	width: 40%;
+	margin-left: 1%;
+	margin-top: 1%;
+	padding: 20px;
+	background: rgba(25,05,35,0.9);
+	float: left;
+}
+
+.add_book h1 {
+	color: white;
+	margin-top: -30px;
+}
+
+select {
+	width: 100%;
+	height: 25px;
+	font-size: 18px;
+}
+
+input {
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+button {
+	width: 100%;
+	height: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: rgba(40,40,100,0.9);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+	transition: 0.3s;
+	box-shadow: 0px 0px 0px 1200px rgba(0, 0, 0, 0.8);
+}
+
+p {
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+.search {
+	width: 50%;
+	float: right;
+	position: relative;
+	margin-top: 1%;
+	background: rgba(25,05,35,0.9);
+	margin-right: 2%;
+}
+
+.search form {
+	width: 90%;
+	height: 90%;
+	margin-left: 7%;
+	margin-top: 2%;
+}
+
+.search form #text {
+	width: 70%;
+	position: relative;
+	float: left;
+	height: 25px;
+	border-radius: 30px;
+	border-style: none;
+	margin-left: -10px;
+	font-size: 14px;
+}
+
+.search form #button {
+	width: 30%;
+	position: relative;
+	float: right;
+	height: 30px;
+	border-radius: 30px;
+	border-style: none;
+}
+
+.search, .search a {
+	color: red;
+}
+
+.modify {
+	width: 50%;
+	float: right;
+	position: relative;
+	margin-top: 1%;
+	background: rgba(25,05,35,0.9);
+	
+	margin-right: 2%;
+}
+
+.modify form {
+	width: 90%;
+	height: 90%;
+	margin-left: 7%;
+	margin-top: 2%;
+}
+
+.modify form #text {
+	width: 70%;
+	position: relative;
+	float: left;
+	height: 25px;
+	border-radius: 30px;
+	border-style: none;
+	margin-left: -10px;
+}
+
+.modify form #button {
+	width: 30%;
+	position: relative;
+	float: right;
+	height: 30px;
+	border-radius: 30px;
+	border-style: none;
+}
+
+label {
+	color: white;
+	font-weight: bolder;
+}
+
+.issue {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 1%;
+	padding: 20px;
+	background: rgba(25,05,35,0.9);
+	float: left;
+}
+
+.issue h1 {
+	color: red;
+	margin-top: -30px;
+	text-align: center;
+}

@@ -24,7 +24,7 @@
 			<label>SUSL Library</label><br><br>
 
 			<div id="Book">
-			<a id="link" href="#">
+			<a id="link" href="book.php">
 				<div id="button-div">
 					<div id="img_div"><img src="../asserts/images/book.png" height="40px" width="40px"></div>
 					<div id="button_text">
@@ -35,22 +35,11 @@
 			</div><br>
 
 			<div id="Category">
-			<a id="link" href="#">
+			<a id="link" href="category.php">
 				<div id="button-div">
 					<div id="img_div"><img src="../asserts/images/category.png" height="40px" width="40px"></div>
 					<div id="button_text">
 						Category<br>
-					</div>
-				</div>
-			</a>
-			</div><br>
-
-			<div id="Author">
-			<a id="link" href="#">
-				<div id="button-div">
-					<div id="img_div"><img src="../asserts/images/author.png" height="40px" width="40px"></div>
-					<div id="button_text">
-						Author<br>
 					</div>
 				</div>
 			</a>
@@ -68,7 +57,7 @@
 			</div><br>
 
 			<div id="Teacher">
-			<a id="link" href="#">
+			<a id="link" href="teacher.php">
 				<div id="button-div">
 					<div id="img_div"><img src="../asserts/images/teacher.png" height="40px" width="40px"></div>
 					<div id="button_text">
@@ -79,7 +68,7 @@
 			</div><br>
 
 			<div id="Issue_History">
-			<a id="link" href="#">
+			<a id="link" href="Issues.php">
 				<div id="button-div">
 					<div id="img_div"><img src="../asserts/images/total-out.png" height="40px" width="40px"></div>
 					<div id="button_text">
@@ -98,8 +87,8 @@
 					<div id="img_div"><img src="../asserts/images/issue-today.png" height="40px" width="40px"></div>
 					<div id="button_text">
 						<?php 
-							if (mysqli_query($connection, 'SELECT * FROM book WHERE issue_date = NOW()')) {
-								echo mysqli_num_rows(mysqli_query($connection, 'SELECT * FROM book WHERE issue_date = NOW()'));
+							if (mysqli_query($connection, 'SELECT * FROM books INNER JOIN borrow ON books.book_id = borrow.borrow_book_id WHERE issued_date = date("Y-m-d")')) {
+								echo mysqli_num_rows(mysqli_query($connection, 'SELECT * FROM books INNER JOIN borrow ON books.book_id = borrow.borrow_book_id WHERE issued_date = date("Y-m-d")'));
 							}
 						?><br>
 						Total Issues Today
@@ -114,8 +103,8 @@
 					<div id="img_div"><img src="../asserts/images/total-out.png" height="40px" width="40px"></div>
 					<div id="button_text">
 						<?php 
-							if (mysqli_query($connection, 'SELECT * FROM book WHERE is_available = 0')) {
-								echo mysqli_num_rows(mysqli_query($connection, 'SELECT * FROM book WHERE is_available = 0'));
+							if (mysqli_query($connection, 'SELECT * FROM borrow')) {
+								echo mysqli_num_rows(mysqli_query($connection, 'SELECT * FROM borrow'));
 							}
 						?><br>
 						Total Books Out
@@ -135,8 +124,8 @@
 					<div id="img_div"><img src="../asserts/images/book.png" height="40px" width="40px"></div>
 					<div id="button_text">
 						<?php 
-							if (mysqli_query($connection, "SELECT * FROM book")) {
-								echo mysqli_num_rows(mysqli_query($connection, "SELECT * FROM book"));
+							if (mysqli_query($connection, "SELECT * FROM books")) {
+								echo mysqli_num_rows(mysqli_query($connection, "SELECT * FROM books"));
 							}
 						?><br>
 						Total Books
@@ -179,4 +168,5 @@
 		</div>
 
 	</body>
+	
 </html>
