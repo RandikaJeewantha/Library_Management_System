@@ -1,10 +1,3 @@
-# TEAM
--->  15APC2336  --  H.M.Y.G.R.J HERATH
--->  15APC2352  --  S.K.V.M KARIYAWASAM
--->  15APC2371  --  R.G.S NAYANTHARA
--->  15APC2389  --  K.THUVISAN
--->  15APC2406  --  R.L.M RATHNAYAKE
-
 
 # Admin 
 	* user name = mithun@gmail.com
